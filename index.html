@@ -50,7 +50,7 @@
                     <h3>Technology Stack</h3>
                     <ul class="tech-list">
                         <li>Python</li>
-                        <li>Google BigQuery</li>
+                        <li>Google BigQuery</li>            
                         <li>SQL</li>
                         <li>TensorFlow</li>
                         <li>scikit-learn</li>
@@ -133,5 +133,26 @@
     <footer>
         <p>&copy; 2025 Zoren P. Mabunga | All Rights Reserved</p>
     </footer>
+    <div id="floating-chatbot">
+        <div id="hover-text">Hi, I'm Zoren's AI Assistant! </div>
+        <div id="chat-icon" onmouseover="showHoverText()" onmouseout="hideHoverText()" onclick="toggleChat()">
+            💬
+        </div>
+        <div id="chat-container">
+            <div id="chat-header">
+                <h3>Ask Me Anything</h3>
+                <button id="close-chat" onclick="toggleChat()">×</button>
+            </div>
+            <div id="chatlog"></div>
+            <div id="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Type your question here..." />
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+    
+<!-- Chatbot Script -->
+<script src="script.js"></script>
+
 </body>
 </html>
