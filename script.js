@@ -48,7 +48,7 @@ function sendChat() {
     `;
 
     // Make the POST request to the backend
-    fetch("http://127.0.0.1:5000/chat", {
+    fetch("https://portfolio-g6b0.onrender.com/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
