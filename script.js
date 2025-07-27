@@ -53,7 +53,7 @@ function sendChat() {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message: query }),
+        body: JSON.stringify({ chatInput: query }),
     })
         .then((response) => {
             if (!response.ok) {
@@ -66,7 +66,7 @@ function sendChat() {
             const botMessage = `
                 <div class="chat-message ai-message">
                     <img src="assets/chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
-                    <span>${data.response}</span>
+                    <span>${data.output}</span>
                 </div>`;
             chatlog.innerHTML += botMessage;
             scrollToBottom(); // Auto-scroll to the latest message
