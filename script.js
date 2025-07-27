@@ -1,6 +1,7 @@
 // Display a welcome message in the browser console
 console.log("Welcome to Zoren P. Mabunga's portfolio!");
-const sessionId = crypto.randomUUID();  // or Date.now().toString() for older browsers
+const sessionId = sessionStorage.getItem("chatbot_session") || crypto.randomUUID();
+sessionStorage.setItem("chatbot_session", sessionId);
 // Function to toggle the chatbot's visibility
 function toggleChat() {
     const chatContainer = document.getElementById("chat-container");
@@ -53,8 +54,10 @@ function sendChat() {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ sessionId: sessionId, 
-                              chatInput: query }),
+        body: JSON.stringify({
+            sessionId: sessionId, 
+            chatInput: query
+        }),
     })
         .then((response) => {
             if (!response.ok) {
