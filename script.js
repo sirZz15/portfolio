@@ -53,7 +53,7 @@ function sendChat() {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ query: query }),
+        body: JSON.stringify({ message: query }),
     })
         .then((response) => {
             if (!response.ok) {
