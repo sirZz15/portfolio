@@ -48,7 +48,7 @@ function sendChat() {
     `;
 
     // Make the POST request to the backend
-    fetch("http://127.0.0.1:5000/chat", {
+    fetch("https://zorenmabunga.app.n8n.cloud/webhook/5f1c0c82-0ff9-40c7-9e2e-b1a96ffe24cd/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
