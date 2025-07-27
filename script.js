@@ -19,7 +19,7 @@ function toggleChat() {
             chatlog.innerHTML += `
                 <div class="chat-message ai-message">
                     <img src="assets/chatbotlogo.png" alt="Chatbot Logo" class="chatbot-logo">
-                    <span>Hi! I am Zoren’s AI Agent. Ask me anything about Zoren. You can also instruct me to send an email to Zoren.</span>
+                    <span>Hi! I am Zoren’s AI Agent. Ask me anything about Zoren.</span>
                 </div>
             `;
             scrollToBottom(); // Ensure the message is visible
